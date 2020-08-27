@@ -1,0 +1,29 @@
+create table CLIENTE 
+(
+   cliente_id         	 int                  not null,
+   nombreC      	     varchar(30)          null,
+   apellidoC	     	 varchar(30)          null,
+   domicilioC	         varchar(30)          null,
+   telefonoC 	         varchar(30)          null,
+   constraint PK_CLIENTE primary key (cliente_id)
+);
+
+
+create table MASCOTA (
+   cliente_id 	           int                  not null,
+   codVeterinario	       int		            not null,
+   color	               varchar(30)          null,
+   raza			           varchar(30)		    null,
+   constraint PK_MASCOTA primary key (codVeterinario, cliente_id)
+)
+
+
+create table VETERINARIO 
+(
+   codVeterinario          int                  not null,
+   nombreV	           varchar(30)              null,
+   apellidoV	           varchar(30)          null,
+   domicilioV		   varchar(30)		        null,
+   telefonoV		   varchar(30)		        null,
+   constraint PK_VETERINARIO primary key (codVeterinario)
+);
